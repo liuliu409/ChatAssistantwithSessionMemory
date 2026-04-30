@@ -1,23 +1,23 @@
 # Chat Assistant with Session Memory
 
 A production-style chat assistant built with **LangGraph**, **Groq API**, and **Streamlit** that demonstrates:
-- 🧠 **Long-term Context Management** via auto-summarization
-- 🔍 **Query Understanding** with ambiguity detection
-- 💾 **Session Persistence** using LangGraph's MemorySaver
-- 🎯 **Structured Outputs** with Pydantic v2
+-  **Long-term Context Management** via auto-summarization
+-  **Query Understanding** with ambiguity detection
+-  **Session Persistence** using LangGraph's MemorySaver
+-  **Structured Outputs** with Pydantic v2
 
 Built as a technical demo for take-home assessment.
 
 ---
-## 📺 Video Demonstration
+##  Video Demonstration
 **Watch the full test case demonstration here:** 👉 [**Project Demo & Test Cases Video**](https://drive.google.com/file/d/1U065z1KtNfmvlqo3f8nZaZfZUia5zIar/view?usp=sharing)
-## 📊 Demo Execution Metrics
+##  Demo Execution Metrics
 - **Total API Calls**: 65 requests were successfully processed during the demo session.
 
 - **Model Used**: llama-3.1-8b-instant via Groq LPU, ensuring high throughput.
 
 - **Success Rate**: 100% of the 65 calls adhered to the structured Pydantic schema.
-## 🏗️ Architecture
+##  Architecture
 
 ### LangGraph Workflow
 
@@ -178,7 +178,7 @@ Click the test case buttons in the sidebar to load demonstrations:
 ---
 ---
 
-## 🧪 Key Technical Decisions
+##  Key Technical Decisions
 
 ### Token Counting
 - Uses `tiktoken` with `cl100k_base` encoding (GPT-4 standard)
@@ -231,7 +231,7 @@ QUERY ANALYSIS (Step 1-3)
 }
 ==================================================
 ```
-📥 **Read the full technical report here:**  👉 [**Technical_Report**](https://drive.google.com/file/d/1zCOM8jexj3-Dbj-mtNglMZJHVxi9d4vY/view?usp=sharing)
+ **Read the full technical report here:**  [**Technical_Report**](https://drive.google.com/file/d/1zCOM8jexj3-Dbj-mtNglMZJHVxi9d4vY/view?usp=sharing)
 
 ---
 
@@ -253,7 +253,7 @@ TOKEN_THRESHOLD = 800           # Summarization trigger (tokens)
 ```
 ---
 
-## 📊 Data Models
+##  Data Models
 
 ### SessionSummary
 ```python
@@ -284,7 +284,7 @@ TOKEN_THRESHOLD = 800           # Summarization trigger (tokens)
 
 ---
 
-## 🧩 How It Works
+##  How It Works
 
 ### Normal Flow (Clear Query)
 1. User sends message → `analyze_query_node`
@@ -304,7 +304,7 @@ TOKEN_THRESHOLD = 800           # Summarization trigger (tokens)
 
 ---
 
-## 🎯 Demo Scenarios
+##  Demo Scenarios
 
 ### Scenario 1: Auto-Summarization
 1. Click "Case 1 (Long)" in sidebar
@@ -325,7 +325,7 @@ TOKEN_THRESHOLD = 800           # Summarization trigger (tokens)
 
 ---
 
-## 🚨 Known Limitations
+##  Known Limitations
 
 - **Context Window Pressure**  
   When the prompt becomes too large, the LLM may hallucinate or cut off the `final_augmented_context`, causing missing or incomplete context.
@@ -343,9 +343,9 @@ TOKEN_THRESHOLD = 800           # Summarization trigger (tokens)
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
-### 🛠 Core Engine Improvements
+###  Core Engine Improvements
 
 - **Robust Two-Phase Retrieval**  
   Split the process into two steps:  
@@ -364,7 +364,7 @@ TOKEN_THRESHOLD = 800           # Summarization trigger (tokens)
 
 ---
 
-### 🚀 Features & UX
+###  Features & UX
 
 - **Multi-user Support**  
   Add authentication (JWT) and isolate data per user or tenant.
@@ -381,13 +381,13 @@ TOKEN_THRESHOLD = 800           # Summarization trigger (tokens)
 - **Analytics Dashboard**  
   Track token usage, node latency, and the number of successful vs. failed function calls.
 
-## 📝 License
+##  License
 
 This is a technical demo project. Use as reference or starting point for your own implementations.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 Built with:
 - [LangGraph](https://github.com/langchain-ai/langgraph) for workflow orchestration
